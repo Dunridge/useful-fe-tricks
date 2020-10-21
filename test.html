@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .run-vertically {
+            writing-mode: vertical-lr;
+            /* writing-mode: horizontal-tb; */
+            /* writing-mode: vertical-rl; */
+            /* writing-mode: vertical-lr; */
+            /* writing-mode: sideways-rl; */
+            /* writing-mode: sideways-lr; */
+        }
+
+        .controlling-width {
+            width: calc(5px + 50%);
+        }
+    </style>
+    <title>Test</title>
+</head>
+
+<body>
+    <!-- 1 -- Datalist element for dropdowns -->
+    <div class="first-trick">
+        <input list="animals" name="animal" id="animal">
+        <datalist id="animals">
+            <option value="Cat">
+            <option value="Dog">
+            <option value="Chicken">
+            <option value="Cow">
+            <option value="Pig">
+        </datalist>
+    </div>
+
+    <!-- 2 -- Clickable label with a checkbox -->
+    <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
+    <label for="checkbox_id">I agree</label>
+    <!-- or -->
+    <!-- <label><input type="checkbox" name="checkbox" id="checkbox_id" value="value">I agree</label> -->
+
+    <!-- 3 - add vertically running text without flexbox -->
+    <p class="run-vertically">Lorem ipsum dolor</p>
+
+    <!-- 4 - use calc function -->
+    <p class="controlling-width">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium expedita
+        minima veritatis, quia accusamus, officiis assumenda maxime ipsa animi consectetur qui placeat, et ab incidunt
+        ratione modi odio sequi!</p>
+
+    <script>
+        // 5 - use console.table
+        let car1 = { name: "Audi", model: "A4" }
+        let car2 = { name: "Volvo", model: "XC90" }
+        let car3 = { name: "Ford", model: "Fusion" }
+        console.table([car1, car2, car3]);
+        // 6 - use console.time
+        console.time("My timer");
+        console.timeEnd("My timer")
+        // 7 - use the in operator
+        // The “in” operator can check if an index exists in an 
+        // array and will return true or false.
+        let cars = ['Audi', 'BMW', 'Mini', 'Bentley', 'Porsche'];
+        console.log(0 in cars);        // returns true
+        console.log(3 in cars);        // returns true
+        console.log(6 in cars);        // returns false
+    </script>
+
+</body>
+
+</html>
